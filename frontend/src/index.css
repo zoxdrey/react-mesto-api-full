@@ -6,6 +6,9 @@
 
 @import "./blocks/header/header.css";
 @import "./blocks/header/__logo/header__logo.css";
+@import "./blocks/header/__link/header__link.css";
+@import "./blocks/header/__user-email/header__user-email.css";
+@import "./blocks/header/__text-wrapper/header__text-wrapper.css";
 
 @import "./blocks/profile/profile.css";
 @import "./blocks/profile/__avatar/profile__avatar.css";
@@ -59,3 +62,16 @@
 @import "./blocks/image-overlay/__image-wrapper/image-overlay__image-wrapper.css";
 @import "./blocks/image-overlay/_opened/image-overlay_opened.css";
 @import "./blocks/popup/_opened/popup_opened.css";
+
+@import "blocks/authorization/authorization.css";
+@import "blocks/authorization-form/authorization-form.css";
+@import "blocks/authorization-form/__title/authorization-form__title.css";
+@import "blocks/authorization-form/__input/authorization-form__input.css";
+@import "blocks/authorization-form/__button/authorization-form__button.css";
+@import "blocks/authorization-form/__footer/authorization-form__footer.css";
+@import "blocks/authorization-form/__footer-text/authorization-form__footer-text.css";
+@import "blocks/authorization-form/__footer-link/authorization-form__footer-link.css";
+
+@import "blocks/info-tooltip/info-tooltip.css";
+@import "blocks/info-tooltip/__title/info-tooltip__title.css";
+@import "blocks/info-tooltip/__image/info-tooltip__image.css";

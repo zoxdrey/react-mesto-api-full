@@ -1,0 +1,12 @@
+.header__user-email {
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+    margin-right: 24px;
+    text-align: right;
+
+    color: #FFFFFF;
+}

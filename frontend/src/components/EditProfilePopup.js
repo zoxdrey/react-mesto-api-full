@@ -10,7 +10,6 @@ export const EditProfilePopup = ({isOpen, onClose, onUpdateUser}) => {
     const currentUser = React.useContext(CurrentUserContext);
 
     React.useEffect(() => {
-        console.log(isSecureContext)
         setName(currentUser?.name);
         setDescription(currentUser?.about);
     }, [currentUser, isOpen]);

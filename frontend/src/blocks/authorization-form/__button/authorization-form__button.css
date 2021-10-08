@@ -1,0 +1,27 @@
+.authorization-form__button {
+    font-family: "Inter", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 0;
+    height: 50px;
+    border-radius: 2px;
+    width: 100%;
+    margin-top: 186px;
+}
+
+.authorization-form__button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .authorization-form__button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

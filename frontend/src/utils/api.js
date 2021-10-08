@@ -80,6 +80,8 @@ class Api {
     changeLikeCardStatus(cardId, isLiked) {
         return isLiked ? this.addLike(cardId) : this.removeLike(cardId)
     }
+
+
 }
 
 const api = new Api(API_OPTIONS);
