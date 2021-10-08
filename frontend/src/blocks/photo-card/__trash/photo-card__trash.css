@@ -1,0 +1,15 @@
+.photo-card__trash {
+    background: transparent url("../../../images/trash.svg") center no-repeat;
+    width: 18px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    visibility: hidden;
+}
+
+.photo-card__trash:hover {
+    opacity: 0.6;
+}

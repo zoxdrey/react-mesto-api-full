@@ -1,0 +1,13 @@
+.image-overlay__image-wrapper {
+    max-width: 75vw;
+    height: 75vh;
+    margin: 0;
+    padding: 0;
+    cursor: auto;
+}
+
+@media (min-width: 1440px) {
+    .image-overlay__image-wrapper {
+        height: 75vh;
+    }
+}

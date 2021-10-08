@@ -1,0 +1,7 @@
+.page {
+  --main-bg-color: #000000;
+  background: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}

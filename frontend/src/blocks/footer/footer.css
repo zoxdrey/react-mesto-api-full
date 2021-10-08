@@ -1,0 +1,10 @@
+.footer {
+  margin-left: 19px;
+  align-self: flex-start;
+}
+
+@media (min-width: 465px) {
+  .footer {
+    margin-left: 0;
+  }
+}

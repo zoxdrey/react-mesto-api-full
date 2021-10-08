@@ -1,0 +1,11 @@
+.photo-card__like-icon {
+    background: transparent url("../../../images/like.svg") center no-repeat;
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+    border: none;
+}
+
+.photo-card__like-icon:hover {
+    opacity: 0.5;
+}

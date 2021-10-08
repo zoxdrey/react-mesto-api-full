@@ -1,0 +1,24 @@
+.photo-cards-list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px 17px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 675px) {
+  .photo-cards-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-cards-list {
+    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,16 @@
+.profile__overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile__overlay:hover {
+    opacity: 1;
+}

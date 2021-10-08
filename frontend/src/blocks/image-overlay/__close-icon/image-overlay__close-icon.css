@@ -1,0 +1,26 @@
+.image-overlay__close-icon {
+  background: transparent url("../../../images/close_icon_small.svg") center
+    no-repeat;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: -39px;
+  right: 0;
+  border: 0;
+}
+
+.image-overlay__close-icon:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .image-overlay__close-icon {
+    background: transparent url("../../../images/close_icon.svg") center
+      no-repeat;
+    width: 48px;
+    height: 48px;
+    right: -48px;
+    top: -48px;
+  }
+}
