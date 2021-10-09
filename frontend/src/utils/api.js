@@ -6,7 +6,7 @@ class Api {
     }
 
     getInitialCards() {
-        return fetch(`${baseUrl}/v1/${groupId}/cards`, this._options).then(this._checkResponse);
+        return fetch(`${baseUrl}/cards`, this._options).then(this._checkResponse);
     }
 
     _checkResponse(res) {
@@ -17,11 +17,11 @@ class Api {
     }
 
     getUserInfo() {
-        return fetch(`${baseUrl}/v1/${groupId}/users/me`, this._options).then(this._checkResponse);
+        return fetch(`${baseUrl}/users/me`, this._options).then(this._checkResponse);
     }
 
     setUserInfo(userName, userAbout) {
-        return fetch(`${baseUrl}/v1/${groupId}/users/me`, {
+        return fetch(`${baseUrl}/users/me`, {
             method: 'PATCH',
             ...this._options,
             body: JSON.stringify({
@@ -32,7 +32,7 @@ class Api {
     }
 
     setUserAvatar(avatarLink) {
-        return fetch(`${baseUrl}/v1/${groupId}/users/me/avatar`, {
+        return fetch(`${baseUrl}/users/me/avatar`, {
             method: 'PATCH',
             ...this._options,
             body: JSON.stringify({
@@ -42,7 +42,7 @@ class Api {
     }
 
     createCard(cardName, cardLink) {
-        return fetch(`${baseUrl}/v1/${groupId}/cards`, {
+        return fetch(`${baseUrl}/cards`, {
             method: 'POST',
             ...this._options,
             body: JSON.stringify({
@@ -53,21 +53,21 @@ class Api {
     }
 
     deleteCard(cardId) {
-        return fetch(`${baseUrl}/v1/${groupId}/cards/${cardId}`, {
+        return fetch(`${baseUrl}/cards/${cardId}`, {
             method: 'DELETE',
             ...this._options,
         }).then(this._checkResponse);
     }
 
     addLike(cardId) {
-        return fetch(`${baseUrl}/v1/${groupId}/cards/likes/${cardId}`, {
+        return fetch(`${baseUrl}/cards/likes/${cardId}`, {
             method: 'PUT',
             ...this._options,
         }).then(this._checkResponse);
     }
 
     removeLike(cardId) {
-        return fetch(`${baseUrl}/v1/${groupId}/cards/likes/${cardId}`, {
+        return fetch(`${baseUrl}/cards/likes/${cardId}`, {
             method: 'DELETE',
             ...this._options,
         }).then(this._checkResponse);

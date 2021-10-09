@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const {celebrate, Joi, errors} = require('celebrate');
+const cors = require('cors');
 const router = require('./routes');
 const {login, createUser} = require('./controllers/users');
 const auth = require('./middlewares/auth');
@@ -15,6 +16,9 @@ const app = express();
 mongoose.connect(MONGO_CONNECTION_STRING, {
   useNewUrlParser: true,
 });
+
+
+app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(requestLogger);
