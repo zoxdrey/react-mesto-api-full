@@ -6,6 +6,6 @@
 
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-https://api.zoxdrey.mesto.nomoredomains.club/
+https://zoxdrey.mesto.nomoredomains.club/
 
 публичный апи - 62.84.118.79
