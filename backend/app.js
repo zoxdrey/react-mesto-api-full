@@ -18,10 +18,10 @@ mongoose.connect(MONGO_CONNECTION_STRING, {
 });
 
 
-app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(requestLogger);
+app.use(cors());
 //TODO удалить после ревью
 app.get('/crash-test', () => {
   setTimeout(() => {

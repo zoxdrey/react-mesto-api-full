@@ -1,10 +1,10 @@
-export const baseUrl = 'https://api.zoxdrey.mesto.nomoredomains.club/';
-export const baseAuthUrl = 'https://api.zoxdrey.mesto.nomoredomains.club/';
+export const baseUrl = 'https://api.zoxdrey.mesto.nomoredomains.club';
+export const baseAuthUrl = 'https://api.zoxdrey.mesto.nomoredomains.club';
 export const authToken = 'c5f24e43-1913-44e6-ba53-ef3a44b15d52';
 export const groupId = 'cohort-25';
 export const API_OPTIONS = {
     headers: {
-        authorization: authToken,
+        Authorization: 'Bearer ' + localStorage.getItem('jwt'),
         'Content-Type': 'application/json'
     }
 }

@@ -4,10 +4,10 @@ const NotFoundError = require('../errors/not-found-error');
 const ForbiddenError = require('../errors/forbidden-error');
 
 module.exports.createCard = (req, res, next) => {
-  const { name, link } = req.body;
+  const {name, link} = req.body;
   const owner = req.user._id;
-  Card.create({ name, link, owner })
-    .then((card) => res.send({ data: card }))
+  Card.create({name, link, owner})
+    .then((card) => res.send({card}))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные при создании пользователя.'));
@@ -23,7 +23,7 @@ module.exports.getCards = (req, res, next) => {
 };
 
 module.exports.deleteCard = (req, res, next) => {
-  const { cardId } = req.params;
+  const {cardId} = req.params;
   const owner = req.user._id;
   Card.findById(cardId)
     .then((card) => {
@@ -33,7 +33,7 @@ module.exports.deleteCard = (req, res, next) => {
       if (!card.owner.equals(owner)) {
         throw new ForbiddenError('Нельзя удалять чужие карточки');
       }
-      Card.deleteOne(card).then(() => res.send({ data: card }));
+      Card.deleteOne(card).then(() => res.send({data: card}));
     })
     .catch((err) => {
       if (err.name === 'ValidationError' || err.name === 'CastError') {
@@ -47,12 +47,12 @@ module.exports.deleteCard = (req, res, next) => {
 };
 
 module.exports.likeCard = (req, res, next) => {
-  const { cardId } = req.params;
+  const {cardId} = req.params;
   const owner = req.user._id;
 
   Card.findByIdAndUpdate(
     cardId,
-    { $addToSet: { likes: owner } }, // добавить _id в массив, если его там нет
+    {$addToSet: {likes: owner}}, // добавить _id в массив, если его там нет
     {
       new: true,
       runValidators: true,
@@ -62,7 +62,7 @@ module.exports.likeCard = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка с указанным _id не найдена.');
       }
-      res.send({ data: card });
+      res.send({data: card});
     })
     .catch((err) => {
       if (err.name === 'ValidationError' || err.name === 'CastError') {
@@ -76,12 +76,12 @@ module.exports.likeCard = (req, res, next) => {
 };
 
 module.exports.dislikeCard = (req, res, next) => {
-  const { cardId } = req.params;
+  const {cardId} = req.params;
   const owner = req.user._id;
 
   Card.findByIdAndUpdate(
     cardId,
-    { $pull: { likes: owner } },
+    {$pull: {likes: owner}},
     {
       new: true,
       runValidators: true,
@@ -91,7 +91,7 @@ module.exports.dislikeCard = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка с указанным _id не найдена.');
       }
-      res.send({ data: card });
+      res.send({data: card});
     })
     .catch((err) => {
       if (err.message === 'Карточка с указанным _id не найдена.') {
