@@ -1,4 +1,4 @@
-import {API_OPTIONS, baseUrl, groupId} from "./constants";
+import {API_OPTIONS, baseUrl} from "./constants";
 
 class Api {
     constructor(options) {
@@ -60,14 +60,14 @@ class Api {
     }
 
     addLike(cardId) {
-        return fetch(`${baseUrl}/cards/likes/${cardId}`, {
+        return fetch(`${baseUrl}/cards/${cardId}/likes`, {
             method: 'PUT',
             ...this._options,
         }).then(this._checkResponse);
     }
 
     removeLike(cardId) {
-        return fetch(`${baseUrl}/cards/likes/${cardId}`, {
+        return fetch(`${baseUrl}/cards/${cardId}/likes`, {
             method: 'DELETE',
             ...this._options,
         }).then(this._checkResponse);
