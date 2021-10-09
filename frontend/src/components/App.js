@@ -32,7 +32,7 @@ function App() {
     const [isRegistrationSuccess, setIsRegistrationSuccess] = useState(false)
     const history = useHistory();
 
-
+   
     useEffect(() => {
         if (isLoggedIn) {
             api.getUserInfo().then(data => {
